@@ -1,0 +1,368 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .rectangle {
+          height: 2em;
+          width: 6em;
+          background-color: #0d28a6;
+        }
+        .rectangle-2{
+          /* height: 21.875em;
+          width: 78.75em; */
+          background-color: #0d28a6;
+          border-radius: 0.625em;
+          justify-content: center; 
+          align-items: center;
+        }
+        .button-1 {
+        background-color: #5cb85f; /* Green */
+        border: none;
+        color: white;
+        padding: 5em 2em;
+        text-align: center;
+        text-decoration:solid;
+        display: inline-block;
+        font-size: 16px;
+        }
+        body {
+          font-family: 'Inter';
+        }
+        .cards {
+        max-width: 2000px;
+        margin: 0 auto;
+        display: grid;
+        }
+
+        @media (min-width: 100px) {
+        .cards { grid-template-columns: repeat(2, 1fr); }
+        .card {width: 24.75em;}
+        .rectangle-2{
+            width: 30em;
+            height: 32em;
+            padding: 3em;
+        }
+        .hs-accordion-group{
+          width: 30em;
+        }
+        
+        }
+
+        @media (min-width: 600px) {
+        .cards { grid-template-columns: repeat(2, 1fr); }
+        .card {width: 20.75em;}
+        .rectangle-2{
+            width: 40em;
+            height: 32em;
+            padding: 3em;
+        }
+        .hs-accordion-group{
+          width: 40em;
+        }
+        
+        }
+
+        @media (min-width: 900px) {
+        .cards { grid-template-columns: repeat(4, fr); }
+        .card {width: 16em; height: 14em;}
+        .rectangle-2{
+            height: 21.875em;
+            width: fit-content;
+            padding: 12em;
+        }
+        .hs-accordion-group{
+          width: 40em;
+        }
+        }
+
+        @media (min-width: 1200px) {
+        .rectangle-2{
+            height: 21.875em;
+            width: fit-content;
+            padding: 12em;
+        }
+        .hs-accordion-group{
+          width: 40em;
+        }
+        }
+
+
+      </style>
+      <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+      
+</head>
+<body class="bg-[#F1F3FF]"> 
+
+    <!-- navbar -->
+    <!-- <div class="container flex bg-[#F1F3FF]" style="justify-content: space-between; height: 6em; align-items: center; padding-top: 1em; padding-bottom: 1em;">
+        <div class="flex rectangle ml-6" style="margin-left: 7em;">
+        </div>
+        <div class="flex hidden lg:flex md:flex" style="justify-content: center;align-items: center; margin: 7em;">
+            <div class="flex mr-10">Our services</div>
+            <div class="flex mr-10">Why Us</div>
+            <div class="flex mr-10">Testimonial</div>
+            <div class="flex mr-10">FAQ</div>
+            <div class="button-1 rounded-sm font-extrabold focus:outline-none text-white text-sm px-5 py-2.5 me-2 mb-2" style="margin-top: 0.625em;">Register</div>
+        </div>
+    </div> -->
+
+    <!-- heroes -->
+    <div class="container flex flex-col sm:flex-row flex-wrap bg-[#F1F3FF]" style="height: auto; padding-top: 1.563em;">
+        <div class="flex flex-1 flex-col justify-center items-start lg:items-start md:items-start sm:items-start mr-10 py-2">
+            <h1 class="text-4xl sm:text-3xl md:text-4xl text-left font-bold ml-12 sm:ml-12 md:ml-24 lg:ml-24 mb-3" style="line-height: 150%;">Sewa & Rental Mobil Terbaik di kawasan (Lokasimu)</h1>
+            <p class=" text-left ml-12 sm:ml-12 md:ml-24 lg:ml-24 mb-3 mr-0 sm:mr-24">Selamat datang di Binar Car Rental. Kami menyediakan mobil kualitas terbaik dengan harga terjangkau. Selalu siap melayani kebutuhanmu untuk sewa mobil selama 24 jam.</p>
+            <div class="button-1 rounded-sm font-extrabold focus:outline-none text-white text-sm px-5 py-2.5 ml-12 sm:ml-12 md:ml-24 lg:ml-24 mb-3" style="margin-top: 0.625em;">Mulai Sewa Mobil</div>
+        </div>
+        <div class="flex flex-1 justify-end">
+            <img src="img_car.png" alt="car">
+        </div>
+    </div>
+    
+    <!-- section -->
+    <div class="container flex flex-col sm:flex-row flex-wrap bg-white pt-8" style="height: auto;">
+        <div class="flex flex-1 justify-center">
+            <img class="px-20 lg:px-24 pt-10 lg:pt-20 pb-8 lg:pb-8 " src="cs.png" alt="cs"/>
+        </div>
+        <div class="flex flex-1 flex-col ml-12 sm:ml-12 md:ml-24 lg:ml-36 mb-3 mr-12 items-start py-2 gap-3 pt-24">
+            <h1 class="text-3xl text-left font-bold" style="line-height: 150%;">Best Car Rental for any kind of trip in (Lokasimu)!</h1>
+            <p class=" text-left" >Sewa mobil di (Lokasimu) bersama Binar Car Rental jaminan harga lebih murah dibandingkan yang lain, kondisi mobil baru, serta kualitas pelayanan terbaik untuk perjalanan wisata, bisnis, wedding, meeting, dll.</p>
+            
+            <div class="flex flex-col flex-grow-0 flex-shrink-0 relative gap-4">
+                <div class="flex gap-4">
+                <img src="check.png" alt="check"/ style="height: fit-content;">
+                <p class="text-sm font-light text-left pt-0.5 text-black">
+                    Sewa Mobil Dengan Supir di Bali 12 Jam
+                </p>
+                </div>
+                <div class="flex gap-4">
+                    <img src="check.png" style="justify-content: space-around;" alt="check"/>
+                    <p class="text-sm font-light text-left text-black">
+                        Sewa Mobil Lepas Kunci di Bali 24 Jam
+                    </p>
+                </div>
+                <div class="flex gap-4">
+                    <img src="check.png" alt="check"/>
+                    <p class="text-sm font-light text-left pt-0.5 text-black">
+                        Sewa Mobil Jangka Panjang Bulanan
+                    </p>
+                </div>
+                <div class="flex gap-4">
+                    <img src="check.png" style="justify-content: space-around;" alt="check"/>
+                    <p class="text-sm font-light text-left text-black">
+                        Gratis Antar - Jemput Mobil di Bandara
+                    </p>
+                </div>
+                <div class="flex gap-4">
+                    <img src="check.png" alt="check"/>
+                    <p class="text-sm font-light text-left pt-0.5 text-black">
+                        Layanan Airport Transfer / Drop In Out
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- why us -->
+    <div class="container flex flex-col sm:flex-col flex-wrap bg-white pb-16" style="height: auto;">
+    <div class="flex flex-1 flex-col ml-12 sm:ml-12 md:ml-24 lg:ml-36 mb-3 mr-12 items-start py-2 gap-3 pt-24">
+        <h1 class="text-3xl text-left font-bold" style="line-height: 150%;">Why Us</h1>
+        <p class="text-left">Mengapa harus memilih Binar Car Rental?</p>
+    </div>
+
+    <div class="ml-12 sm:ml-12 md:ml-24 lg:ml-36 mb-3 mr-12 items-start">
+        <div class="cards flex flex-wrap gap-20">
+            <div class="card flex-grow-0 flex-shrink-0 relative rounded-lg border border-[#d0d0d0] p-6">
+                <img src="icon_complete.png" class="justify-around mb-4" alt="check"/>
+                <div class="text-md font-semibold mb-4">Mobil Lengkap</div>
+                <div class="text-sm mb-4">Tersedia banyak pilihan mobil, kondisi masih baru, bersih dan terawat</div>
+            </div>
+            <div class="card flex-grow-0 flex-shrink-0 relative rounded-lg border border-[#d0d0d0] p-6">
+                <img src="icon_price.png" class="justify-around mb-4" alt="check"/>
+                <div class="text-md font-semibold mb-4">Harga Terjangkau</div>
+                <div class="text-sm mb-4">Harga murah dan bersaing, bisa bandingkan harga kami dengan rental mobil lain</div>
+            </div>
+            <div class="card flex-grow-0 flex-shrink-0 relative rounded-lg border border-[#d0d0d0] p-6"">
+                <img src="icon_24hrs.png" class="justify-around mb-4" alt="check"/>
+                <div class="text-md font-semibold mb-4">Layanan 24 Jam</div>
+                <div class="text-sm mb-4">Siap melayani kebutuhan Anda selama 24 jam nonstop. Kami juga tersedia di akhir minggu</div>
+            </div>
+            <div class="card flex-grow-0 flex-shrink-0 relative rounded-lg border border-[#d0d0d0] p-6">
+                <img src="icon_professional.png" class="justify-around mb-4" alt="check"/>
+                <div class="text-md font-semibold mb-4">Sopir Profesional</div>
+                <div class="text-sm mb-4">Sopir yang profesional, berpengalaman, jujur, ramah dan selalu tepat waktu</div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+    <!-- testimonial -->
+    <div class="container flex flex-col bg-white justify-center" style="padding-bottom: 5em;">
+        <h1 class="text-3xl" style="font-weight:900; margin-bottom: 1.25em; line-height: 150%; align-self: center;">Testimonial</h1>
+        <div class="flex" style="align-self: center; margin-bottom: 2.5em;">Berbagai review positif dari para pelanggan kami</div>
+        <div>
+            <!-- Slider -->
+            <div data-hs-carousel='{
+                "loadingClasses": "opacity-0",
+                "isAutoPlay": true
+            }' class="relative">
+            <div class="hs-carousel relative overflow-hidden w-full min-h-[350px] bg-white rounded-lg">
+                <div class="hs-carousel-body absolute top-0 bottom-0 start-0 flex flex-nowrap transition-transform duration-700 opacity-0">
+                <div class="hs-carousel-slide">
+                    <div class="flex justify-center h-full bg-gray-100 p-6">
+                    <span class="self-center text-4xl transition duration-700">First slide</span>
+                    </div>
+                </div>
+                <div class="hs-carousel-slide">
+                    <div class="flex justify-center h-full bg-gray-200 p-6">
+                    <span class="self-center text-4xl transition duration-700">Second slide</span>
+                    </div>
+                </div>
+                <div class="hs-carousel-slide">
+                    <div class="flex justify-center h-full bg-gray-300 p-6">
+                    <span class="self-center text-4xl transition duration-700">Third slide</span>
+                    </div>
+                </div>
+                </div>
+            </div>
+    
+            <button type="button" class="hs-carousel-prev hs-carousel:disabled:opacity-50 disabled:pointer-events-none absolute inset-y-0 start-0 inline-flex justify-center items-center w-[46px] h-full text-gray-800 hover:bg-gray-800/[.1]">
+                <span class="text-2xl" aria-hidden="true">
+                <svg class="size-4" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+                </svg>
+                </span>
+                <span class="sr-only">Previous</span>
+            </button>
+            <button type="button" class="hs-carousel-next hs-carousel:disabled:opacity-50 disabled:pointer-events-none absolute inset-y-0 end-0 inline-flex justify-center items-center w-[46px] h-full text-gray-800 hover:bg-gray-800/[.1]">
+                <span class="sr-only">Next</span>
+                <span class="text-2xl" aria-hidden="true">
+                <svg class="size-4" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                </svg>
+                </span>
+            </button>
+    
+            <div class="hs-carousel-pagination flex justify-center absolute bottom-3 start-0 end-0 space-x-2">
+                <span class="hs-carousel-active:bg-blue-700 hs-carousel-active:border-blue-700 size-3 border border-gray-400 rounded-full cursor-pointer"></span>
+                <span class="hs-carousel-active:bg-blue-700 hs-carousel-active:border-blue-700 size-3 border border-gray-400 rounded-full cursor-pointer"></span>
+                <span class="hs-carousel-active:bg-blue-700 hs-carousel-active:border-blue-700 size-3 border border-gray-400 rounded-full cursor-pointer"></span>
+            </div>
+            </div>
+
+        </div>
+    <!-- End Slider -->
+    </div>
+
+    <!-- box -->
+    <div class="container flex flex-col bg-white justify-center" style="padding-bottom: 5em; align-items: center; align-content: center;">
+        <div class="rectangle-2 flex flex-col justify-center items-center">
+            <h1 class="text-4xl text-white font-bold mb-8 text-center">Sewa & Rental Mobil Terbaik di kawasan (Lokasimu)</h1>
+            <p class="text-white text-center mb-6" style="max-width: 34.375em;">Selamat datang di Binar Car Rental. Kami menyediakan mobil kualitas terbaik dengan harga terjangkau. Selalu siap melayani kebutuhanmu untuk sewa mobil selama 24 jam.</p>
+            <div class="button-1 rounded-sm font-extrabold focus:outline-none text-white text-sm px-5 py-2.5 me-2 mb-2">Mulai Sewa Mobil</div>
+        </div>
+    </div>
+
+
+
+    <!-- FAQ -->
+    <div class="container flex flex-col sm:flex-row flex-wrap bg-white">
+        <div class="flex flex-1 flex-col flex-start items-start mx-10 ml-12 sm:ml-12 md:ml-24 lg:ml-36 mb-3 " style="margin-left: 8.125em;">
+            <h1 class="text-2xl" style="font-weight:900; margin-bottom: 1.25em; line-height: 150%; ">Frequently Asked Question</h1>
+            <p style="margin-bottom: 0.938em; width: 34.375em;">Loem ipsum dolor sit amet, consectetur adipiscing elit</p>
+
+        </div>
+        <div class="flex flex-1 " style="height: 25em; padding-right: 8.125em;">
+            <div class="hs-accordion-group ">
+          
+                <div class="hs-accordion border border-[#d0d0d0]" style="border-radius: 0.625em; margin-bottom:1.25em;"  id="hs-basic-heading-two">
+                  <button class="hs-accordion-toggle text-black px-6 py-3 inline-flex items-center gap-x-3 text-md w-full font-semibold text-start" aria-controls="hs-basic-collapse-two">
+                    <svg class="hs-accordion-active:hidden hs-accordion-active:text-blue-600 hs-accordion-active:group-hover:text-blue-600 block size-4 text-gray-600 group-hover:text-gray-500 dark:text-gray-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+                    <svg class="hs-accordion-active:block hs-accordion-active:text-blue-600 hs-accordion-active:group-hover:text-blue-600 hidden size-4 text-gray-600 group-hover:text-gray-500 dark:text-gray-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/></svg>
+                    Q1
+                  </button>
+                  <div id="hs-basic-collapse-two" class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300" aria-labelledby="hs-basic-heading-two">
+                    <div class="pb-4 px-6">
+                      <p class="text-md text-black" style="margin-top: 1.25em;">
+                        It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+    
+                <div class="hs-accordion border border-[#d0d0d0]" style="border-radius: 0.625em; margin-bottom:1.25em;"  id="hs-basic-heading-two">
+                    <button class="hs-accordion-toggle text-black px-6 py-3 inline-flex items-center gap-x-3 text-md w-full font-semibold text-start" aria-controls="hs-basic-collapse-two">
+                      <svg class="hs-accordion-active:hidden hs-accordion-active:text-blue-600 hs-accordion-active:group-hover:text-blue-600 block size-4 text-gray-600 group-hover:text-gray-500 dark:text-gray-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+                      <svg class="hs-accordion-active:block hs-accordion-active:text-blue-600 hs-accordion-active:group-hover:text-blue-600 hidden size-4 text-gray-600 group-hover:text-gray-500 dark:text-gray-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/></svg>
+                      Q2
+                    </button>
+                    <div id="hs-basic-collapse-two" class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300" aria-labelledby="hs-basic-heading-two">
+                      <div class="pb-4 px-6">
+                        <p class="text-md text-black" style="margin-top: 1.25em;">
+                          It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+    
+    
+                  <div class="hs-accordion border border-[#d0d0d0]" style="border-radius: 0.625em; margin-bottom:1.25em;"  id="hs-basic-heading-two">
+                    <button class="hs-accordion-toggle text-black px-6 py-3 inline-flex items-center gap-x-3 text-md w-full font-semibold text-start" aria-controls="hs-basic-collapse-two">
+                      <svg class="hs-accordion-active:hidden hs-accordion-active:text-blue-600 hs-accordion-active:group-hover:text-blue-600 block size-4 text-gray-600 group-hover:text-gray-500 dark:text-gray-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+                      <svg class="hs-accordion-active:block hs-accordion-active:text-blue-600 hs-accordion-active:group-hover:text-blue-600 hidden size-4 text-gray-600 group-hover:text-gray-500 dark:text-gray-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/></svg>
+                      Q3
+                    </button>
+                    <div id="hs-basic-collapse-two" class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300" aria-labelledby="hs-basic-heading-two">
+                      <div class="pb-4 px-6">
+                        <p class="text-md text-black" style="margin-top: 1.25em;">
+                          It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="hs-accordion border border-[#d0d0d0]" style="border-radius: 0.625em; margin-bottom:1.25em;"  id="hs-basic-heading-two">
+                    <button class="hs-accordion-toggle text-black px-6 py-3 inline-flex items-center gap-x-3 text-md w-full font-semibold text-start" aria-controls="hs-basic-collapse-two">
+                      <svg class="hs-accordion-active:hidden hs-accordion-active:text-blue-600 hs-accordion-active:group-hover:text-blue-600 block size-4 text-gray-600 group-hover:text-gray-500 dark:text-gray-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+                      <svg class="hs-accordion-active:block hs-accordion-active:text-blue-600 hs-accordion-active:group-hover:text-blue-600 hidden size-4 text-gray-600 group-hover:text-gray-500 dark:text-gray-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/></svg>
+                      Q4
+                    </button>
+                    <div id="hs-basic-collapse-two" class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300" aria-labelledby="hs-basic-heading-two">
+                      <div class="pb-4 px-6">
+                        <p class="text-md text-black" style="margin-top: 1.25em;">
+                          It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+    
+                  <div class="hs-accordion border border-[#d0d0d0]" style="border-radius: 0.625em; margin-bottom:1.25em;"  id="hs-basic-heading-two">
+                    <button class="hs-accordion-toggle text-black px-6 py-3 inline-flex items-center gap-x-3 text-md w-full font-semibold text-start" aria-controls="hs-basic-collapse-two">
+                      <svg class="hs-accordion-active:hidden hs-accordion-active:text-blue-600 hs-accordion-active:group-hover:text-blue-600 block size-4 text-gray-600 group-hover:text-gray-500 dark:text-gray-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+                      <svg class="hs-accordion-active:block hs-accordion-active:text-blue-600 hs-accordion-active:group-hover:text-blue-600 hidden size-4 text-gray-600 group-hover:text-gray-500 dark:text-gray-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/></svg>
+                      Q5
+                    </button>
+                    <div id="hs-basic-collapse-two" class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300" aria-labelledby="hs-basic-heading-two">
+                      <div class="pb-4 px-6">
+                        <p class="text-md text-black" style="margin-top: 1.25em;">
+                          It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                   </div>
+                
+    </div>
+    
+
+    
+
+
+    
+    <script src="./node_modules/preline/dist/preline.js"></script>
+</body>
+</html>
