@@ -1,0 +1,1109 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .scrolling-wrapper-flexbox {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+      }
+      .card-2 {
+        flex: 0 0 auto;
+      }
+      .rectangle {
+        height: 1.5em;
+        width: 4em;
+        background-color: #0d28a6;
+      }
+      .rectangle-2 {
+        /* height: 21.875em;
+          width: 78.75em; */
+        background-color: #0d28a6;
+        border-radius: 0.625em;
+        justify-content: center;
+        align-items: center;
+      }
+      svg:hover {
+        stroke: whitesmoke;
+        fill: #5cb85f;
+      }
+      .button-1 {
+        background-color: #5cb85f; /* Green */
+        border: none;
+        color: white;
+        padding: 5em 2em;
+        text-align: center;
+        text-decoration: solid;
+        display: inline-block;
+      }
+      body {
+        font-family: "Inter";
+      }
+      .cards {
+        max-width: 2000px;
+        margin: 0 auto;
+        display: grid;
+      }
+
+      @media (min-width: 100px) {
+        .cards {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .card {
+          width: 18em;
+          height: 11em;
+          padding: 2em;
+        }
+        .rectangle-2 {
+          width: fit-content;
+          height: 26em;
+          padding: 3em;
+        }
+        .hs-accordion-group {
+          width: 20em;
+        }
+      }
+
+      @media (min-width: 600px) {
+        .cards {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .card {
+          width: fit-content;
+          padding: 2em;
+        }
+        .rectangle-2 {
+          width: fit-content;
+          height: 32em;
+          padding: 3em;
+        }
+        .hs-accordion-group {
+          width: 35em;
+        }
+      }
+
+      @media (min-width: 900px) {
+        .cards {
+          grid-template-columns: repeat(4, fr);
+        }
+        .card {
+          width: 13em;
+          height: 10.5em;
+        }
+        .rectangle-2 {
+          height: 16em;
+          width: 51.3em;
+          padding: 9em;
+        }
+        .hs-accordion-group {
+          width: 30em;
+        }
+      }
+
+      @media (min-width: 1200px) {
+        .rectangle-2 {
+          height: 21.875em;
+          width: fit-content;
+          padding: 12em;
+        }
+        .hs-accordion-group {
+          width: 35em;
+          margin-right: 1em;
+        }
+      }
+    </style>
+    <link
+      href="https://fonts.googleapis.com/css?family=Inter"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-[#F1F3FF]">
+    <div class="w-full">
+      <!-- navbar -->
+      <div
+        class="flex bg-[#F1F3FF] justify-between h-[4em] items-center pt-[1.5em]"
+      >
+        <div class="flex rectangle ml-[3em] sm:ml-[6em]"></div>
+        <div class=" hidden lg:flex md:flex justify-center items-center mx-[1em]
+        my-[1em] mr-16" " >
+        <div class="flex mr-10 text-xs">
+          <a href="#services">Our services</a>
+        </div>
+        <div class="flex mr-10 text-xs">
+          <a href="#whyUs">Why Us</a>
+        </div>
+        <div class="flex mr-10 text-xs">
+          <a href="#testimonial">Testimonial</a>
+        </div>
+        <div class="flex mr-10 text-xs">
+          <a href="#FAQ">FAQ</a>
+        </div>
+        <div
+          class="button-1 rounded-sm font-extrabold focus:outline-none text-[10px] text-white px-3 py-2 mb-3"
+          style="margin-top: 0.625em"
+        >
+          Register
+        </div>
+      </div>
+      <div class="sm:hidden mr-8">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-6 h-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+          />
+        </svg>
+      </div>
+    </div>
+
+    <!-- Section 1: heroes -->
+    <div
+      class="flex flex-col sm:flex-row flex-wrap bg-[#F1F3FF] h-auto pt-[1em]"
+    >
+      <div
+        class="flex flex-1 flex-col justify-center items-start lg:items-start md:items-start sm:items-start mr-10 py-10"
+      >
+        <h1
+          class="text-xl sm:text-2xl md:text-2xl text-left font-bold ml-12 sm:ml-12 md:ml-24 lg:ml-24 mb-3"
+          style="line-height: 150%"
+        >
+          Sewa & Rental Mobil Terbaik di kawasan (Lokasimu)
+        </h1>
+        <p
+          class="text-xs text-left ml-12 sm:ml-12 md:ml-24 lg:ml-24 mb-3 mr-0 sm:mr-5 leading-[150%]"
+        >
+          Selamat datang di Binar Car Rental. Kami menyediakan mobil kualitas
+          terbaik dengan harga terjangkau. Selalu siap melayani kebutuhanmu
+          untuk sewa mobil selama 24 jam.
+        </p>
+        <div
+          class="button-1 rounded-sm font-extrabold focus:outline-none text-[9px] text-white px-2 py-2 ml-12 sm:ml-12 md:ml-24 lg:ml-24 mb-3"
+          style="margin-top: 0.625em"
+        >
+          Mulai Sewa Mobil
+        </div>
+      </div>
+      <div class="flex flex-1 justify-end">
+        <img src="img_car.png" alt="car" />
+      </div>
+    </div>
+
+    <!-- Section: services -->
+    <div
+      id="services"
+      class="flex flex-col sm:flex-row flex-wrap bg-white pt-8"
+      style="height: auto"
+    >
+      <div class="flex flex-1 justify-self-center">
+        <img
+          class="px-5 sm:pl-24 pt-10 lg:pt-20 pb-8 lg:pb-8"
+          src="cs.png"
+          alt="cs"
+        />
+      </div>
+      <div
+        class="flex flex-1 flex-col ml-12 sm:ml-12 md:ml-24 lg:ml-20 mb-3 mr-12 items-start py-2 gap-4 pt-16"
+      >
+        <h1 class="text-xl text-left font-bold" style="line-height: 150%">
+          Best Car Rental for any kind of trip in (Lokasimu)!
+        </h1>
+        <p class="text-left text-xs pb-3">
+          Sewa mobil di (Lokasimu) bersama Binar Car Rental jaminan harga lebih
+          murah dibandingkan yang lain, kondisi mobil baru, serta kualitas
+          pelayanan terbaik untuk perjalanan wisata, bisnis, wedding, meeting,
+          dll.
+        </p>
+
+        <div class="flex flex-col gap-4">
+          <div class="flex gap-4">
+            <img src="check.png" alt="check"/ style="height: fit-content;">
+            <p class="text-xs font-light text-left pt-1 text-black">
+              Sewa Mobil Dengan Supir di Bali 12 Jam
+            </p>
+          </div>
+          <div class="flex gap-4">
+            <img src="check.png" alt="check"/ style="height: fit-content;">
+            <p
+              class="text-xs font-light text-left pt-1 text-black items-self-center"
+            >
+              Sewa Mobil Lepas Kunci di Bali 24 Jam
+            </p>
+          </div>
+          <div class="flex gap-4">
+            <img src="check.png" alt="check" style="height: fit-content" />
+            <p class="text-xs font-light text-left pt-1 text-black">
+              Sewa Mobil Jangka Panjang Bulanan
+            </p>
+          </div>
+          <div class="flex gap-4">
+            <img src="check.png" alt="check" style="height: fit-content" />
+            <p class="text-xs font-light text-left pt-1 text-black">
+              Gratis Antar - Jemput Mobil di Bandara
+            </p>
+          </div>
+          <div class="flex gap-4">
+            <img src="check.png" alt="check" style="height: fit-content" />
+            <p class="text-xs font-light text-left pt-1 text-black">
+              Layanan Airport Transfer / Drop In Out
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section: why us -->
+    <div
+      id="whyUs"
+      class="flex flex-col sm:flex-col flex-wrap bg-white pb-16"
+      style="height: auto"
+    >
+      <div
+        class="flex flex-1 flex-col ml-6 sm:ml-12 md:ml-24 lg:ml-24 mb-3 mr-12 items-center sm:items-start py-2 gap-3 pt-24"
+      >
+        <h1
+          class="text-xl text-left font-bold items-center sm:items-start"
+          style="line-height: 150%"
+        >
+          Why Us
+        </h1>
+        <p class="text-center sm:text-left text-sm">
+          Mengapa harus memilih Binar Car Rental?
+        </p>
+      </div>
+
+      <div class="ml-10 sm:ml-12 md:ml-24 lg:ml-24 mb-3 mr-12 items-start">
+        <div class="cards flex flex-wrap gap-2">
+          <div
+            class="card flex-grow-0 flex-shrink-0 relative rounded-lg border border-[#d0d0d0] p-5"
+          >
+            <img
+              src="icon_complete.png"
+              class="justify-around mb-4"
+              alt="check"
+            />
+            <div class="text-[12px] font-semibold mb-2">Mobil Lengkap</div>
+            <div class="text-[11px] mb-4">
+              Tersedia banyak pilihan mobil, kondisi masih baru, bersih dan
+              terawat
+            </div>
+          </div>
+          <div
+            class="card flex-grow-0 flex-shrink-0 relative rounded-lg border border-[#d0d0d0] p-5"
+          >
+            <img src="icon_price.png" class="justify-around mb-4" alt="check" />
+            <div class="text-[12px] font-semibold mb-2">Harga Terjangkau</div>
+            <div class="text-[11px] mb-4">
+              Harga murah dan bersaing, bisa bandingkan harga kami dengan rental
+              mobil lain
+            </div>
+          </div>
+          <div
+            class="card flex-grow-0 flex-shrink-0 relative rounded-lg border border-[#d0d0d0] p-5"
+          >
+            <img src="icon_24hrs.png" class="justify-around mb-4" alt="check" />
+            <div class="text-[12px] font-semibold mb-2">Layanan 24 Jam</div>
+            <div class="text-[11px] mb-8">
+              Siap melayani kebutuhan Anda selama 24 jam nonstop. Kami juga
+              tersedia di akhir minggu
+            </div>
+          </div>
+          <div
+            class="card flex-grow-0 flex-shrink-0 relative rounded-lg border border-[#d0d0d0] p-5"
+          >
+            <img
+              src="icon_professional.png"
+              class="justify-around mb-4"
+              alt="check"
+            />
+            <div class="text-[12px] font-semibold mb-2">Sopir Profesional</div>
+            <div class="text-[11px] mb-4">
+              Sopir yang profesional, berpengalaman, jujur, ramah dan selalu
+              tepat waktu
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- testimonial -->
+    <div
+      id="testimonial"
+      class="flex flex-col bg-white justify-center"
+      style="padding-bottom: 2em"
+    >
+      <h1
+        class="text-xl"
+        style="
+          font-weight: 900;
+          margin-bottom: 1.25em;
+          line-height: 150%;
+          align-self: center;
+        "
+      >
+        Testimonial
+      </h1>
+
+      <p class="text-center text-sm mb-[2.5em] mx-[2.5em]">
+        Berbagai review positif dari para pelanggan kami
+      </p>
+      <div class="scrolling-wrapper-flexbox flex row gap-3">
+        <div
+          class="card-2 flex flex-col sm:flex-row rounded-md w-[16em] sm:w-[25em] h-auto bg-[#F1F3FF] p-5"
+        >
+          <div class="flex justify-center self-center items-center">
+            <img
+              class="w-[4em] sm:w-[16em] justify-center"
+              src="orang1.png"
+              alt="org"
+            />
+          </div>
+          <div class="flex-col ml-0 sm:ml-8 my-2">
+            <div class="flex flex-row justify-center sm:justify-start my-2">
+              <svg
+                width="12"
+                height="12"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M10.7881 3.21068C11.2364 2.13274 12.7635 2.13273 13.2118 3.21068L15.2938 8.2164L20.6979 8.64964C21.8616 8.74293 22.3335 10.1952 21.4469 10.9547L17.3295 14.4817L18.5874 19.7551C18.8583 20.8908 17.6229 21.7883 16.6266 21.1798L11.9999 18.3538L7.37329 21.1798C6.37697 21.7883 5.14158 20.8908 5.41246 19.7551L6.67038 14.4817L2.55303 10.9547C1.66639 10.1952 2.13826 8.74293 3.302 8.64964L8.70609 8.2164L10.7881 3.21068Z"
+                  fill="#F9CC00"
+                />
+              </svg>
+              <svg
+                width="12"
+                height="12"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M10.7881 3.21068C11.2364 2.13274 12.7635 2.13273 13.2118 3.21068L15.2938 8.2164L20.6979 8.64964C21.8616 8.74293 22.3335 10.1952 21.4469 10.9547L17.3295 14.4817L18.5874 19.7551C18.8583 20.8908 17.6229 21.7883 16.6266 21.1798L11.9999 18.3538L7.37329 21.1798C6.37697 21.7883 5.14158 20.8908 5.41246 19.7551L6.67038 14.4817L2.55303 10.9547C1.66639 10.1952 2.13826 8.74293 3.302 8.64964L8.70609 8.2164L10.7881 3.21068Z"
+                  fill="#F9CC00"
+                />
+              </svg>
+              <svg
+                width="12"
+                height="12"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M10.7881 3.21068C11.2364 2.13274 12.7635 2.13273 13.2118 3.21068L15.2938 8.2164L20.6979 8.64964C21.8616 8.74293 22.3335 10.1952 21.4469 10.9547L17.3295 14.4817L18.5874 19.7551C18.8583 20.8908 17.6229 21.7883 16.6266 21.1798L11.9999 18.3538L7.37329 21.1798C6.37697 21.7883 5.14158 20.8908 5.41246 19.7551L6.67038 14.4817L2.55303 10.9547C1.66639 10.1952 2.13826 8.74293 3.302 8.64964L8.70609 8.2164L10.7881 3.21068Z"
+                  fill="#F9CC00"
+                />
+              </svg>
+              <svg
+                width="12"
+                height="12"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M10.7881 3.21068C11.2364 2.13274 12.7635 2.13273 13.2118 3.21068L15.2938 8.2164L20.6979 8.64964C21.8616 8.74293 22.3335 10.1952 21.4469 10.9547L17.3295 14.4817L18.5874 19.7551C18.8583 20.8908 17.6229 21.7883 16.6266 21.1798L11.9999 18.3538L7.37329 21.1798C6.37697 21.7883 5.14158 20.8908 5.41246 19.7551L6.67038 14.4817L2.55303 10.9547C1.66639 10.1952 2.13826 8.74293 3.302 8.64964L8.70609 8.2164L10.7881 3.21068Z"
+                  fill="#F9CC00"
+                />
+              </svg>
+              <svg
+                width="12"
+                height="12"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M10.7881 3.21068C11.2364 2.13274 12.7635 2.13273 13.2118 3.21068L15.2938 8.2164L20.6979 8.64964C21.8616 8.74293 22.3335 10.1952 21.4469 10.9547L17.3295 14.4817L18.5874 19.7551C18.8583 20.8908 17.6229 21.7883 16.6266 21.1798L11.9999 18.3538L7.37329 21.1798C6.37697 21.7883 5.14158 20.8908 5.41246 19.7551L6.67038 14.4817L2.55303 10.9547C1.66639 10.1952 2.13826 8.74293 3.302 8.64964L8.70609 8.2164L10.7881 3.21068Z"
+                  fill="#F9CC00"
+                />
+              </svg>
+            </div>
+            <p class="text-[10px] font-light my-2">
+              “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit,
+              sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing
+              elit, sed do eiusmod”
+            </p>
+            <p class="text-[10px] font-semibold">John Dee 32, Bromo</p>
+          </div>
+        </div>
+        <div
+          class="card-2 flex flex-col sm:flex-row rounded-md w-[16em] sm:w-[25em] h-auto bg-[#F1F3FF] p-5"
+        >
+          <div class="flex justify-center self-center items-center">
+            <img
+              class="w-[4em] sm:w-[16em] justify-center"
+              src="orang2.png"
+              alt="org"
+            />
+          </div>
+          <div class="flex-col ml-0 sm:ml-8 my-2">
+            <div class="flex flex-row justify-center sm:justify-start my-2">
+              <svg
+                width="12"
+                height="12"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M10.7881 3.21068C11.2364 2.13274 12.7635 2.13273 13.2118 3.21068L15.2938 8.2164L20.6979 8.64964C21.8616 8.74293 22.3335 10.1952 21.4469 10.9547L17.3295 14.4817L18.5874 19.7551C18.8583 20.8908 17.6229 21.7883 16.6266 21.1798L11.9999 18.3538L7.37329 21.1798C6.37697 21.7883 5.14158 20.8908 5.41246 19.7551L6.67038 14.4817L2.55303 10.9547C1.66639 10.1952 2.13826 8.74293 3.302 8.64964L8.70609 8.2164L10.7881 3.21068Z"
+                  fill="#F9CC00"
+                />
+              </svg>
+              <svg
+                width="12"
+                height="12"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M10.7881 3.21068C11.2364 2.13274 12.7635 2.13273 13.2118 3.21068L15.2938 8.2164L20.6979 8.64964C21.8616 8.74293 22.3335 10.1952 21.4469 10.9547L17.3295 14.4817L18.5874 19.7551C18.8583 20.8908 17.6229 21.7883 16.6266 21.1798L11.9999 18.3538L7.37329 21.1798C6.37697 21.7883 5.14158 20.8908 5.41246 19.7551L6.67038 14.4817L2.55303 10.9547C1.66639 10.1952 2.13826 8.74293 3.302 8.64964L8.70609 8.2164L10.7881 3.21068Z"
+                  fill="#F9CC00"
+                />
+              </svg>
+              <svg
+                width="12"
+                height="12"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M10.7881 3.21068C11.2364 2.13274 12.7635 2.13273 13.2118 3.21068L15.2938 8.2164L20.6979 8.64964C21.8616 8.74293 22.3335 10.1952 21.4469 10.9547L17.3295 14.4817L18.5874 19.7551C18.8583 20.8908 17.6229 21.7883 16.6266 21.1798L11.9999 18.3538L7.37329 21.1798C6.37697 21.7883 5.14158 20.8908 5.41246 19.7551L6.67038 14.4817L2.55303 10.9547C1.66639 10.1952 2.13826 8.74293 3.302 8.64964L8.70609 8.2164L10.7881 3.21068Z"
+                  fill="#F9CC00"
+                />
+              </svg>
+              <svg
+                width="12"
+                height="12"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M10.7881 3.21068C11.2364 2.13274 12.7635 2.13273 13.2118 3.21068L15.2938 8.2164L20.6979 8.64964C21.8616 8.74293 22.3335 10.1952 21.4469 10.9547L17.3295 14.4817L18.5874 19.7551C18.8583 20.8908 17.6229 21.7883 16.6266 21.1798L11.9999 18.3538L7.37329 21.1798C6.37697 21.7883 5.14158 20.8908 5.41246 19.7551L6.67038 14.4817L2.55303 10.9547C1.66639 10.1952 2.13826 8.74293 3.302 8.64964L8.70609 8.2164L10.7881 3.21068Z"
+                  fill="#F9CC00"
+                />
+              </svg>
+              <svg
+                width="12"
+                height="12"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M10.7881 3.21068C11.2364 2.13274 12.7635 2.13273 13.2118 3.21068L15.2938 8.2164L20.6979 8.64964C21.8616 8.74293 22.3335 10.1952 21.4469 10.9547L17.3295 14.4817L18.5874 19.7551C18.8583 20.8908 17.6229 21.7883 16.6266 21.1798L11.9999 18.3538L7.37329 21.1798C6.37697 21.7883 5.14158 20.8908 5.41246 19.7551L6.67038 14.4817L2.55303 10.9547C1.66639 10.1952 2.13826 8.74293 3.302 8.64964L8.70609 8.2164L10.7881 3.21068Z"
+                  fill="#F9CC00"
+                />
+              </svg>
+            </div>
+            <p class="text-[10px] font-light my-2">
+              “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit,
+              sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing
+              elit, sed do eiusmod”
+            </p>
+            <p class="text-[10px] font-semibold">John Dee 32, Bromo</p>
+          </div>
+        </div>
+        <div
+          class="card-2 flex flex-col sm:flex-row rounded-md w-[16em] sm:w-[25em] h-auto bg-[#F1F3FF] p-5"
+        >
+          <div class="flex justify-center self-center items-center">
+            <img
+              class="w-[4em] sm:w-[16em] justify-center"
+              src="orang1.png"
+              alt="org"
+            />
+          </div>
+          <div class="flex-col ml-0 sm:ml-8 my-2">
+            <div class="flex flex-row justify-center sm:justify-start my-2">
+              <svg
+                width="12"
+                height="12"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M10.7881 3.21068C11.2364 2.13274 12.7635 2.13273 13.2118 3.21068L15.2938 8.2164L20.6979 8.64964C21.8616 8.74293 22.3335 10.1952 21.4469 10.9547L17.3295 14.4817L18.5874 19.7551C18.8583 20.8908 17.6229 21.7883 16.6266 21.1798L11.9999 18.3538L7.37329 21.1798C6.37697 21.7883 5.14158 20.8908 5.41246 19.7551L6.67038 14.4817L2.55303 10.9547C1.66639 10.1952 2.13826 8.74293 3.302 8.64964L8.70609 8.2164L10.7881 3.21068Z"
+                  fill="#F9CC00"
+                />
+              </svg>
+              <svg
+                width="12"
+                height="12"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M10.7881 3.21068C11.2364 2.13274 12.7635 2.13273 13.2118 3.21068L15.2938 8.2164L20.6979 8.64964C21.8616 8.74293 22.3335 10.1952 21.4469 10.9547L17.3295 14.4817L18.5874 19.7551C18.8583 20.8908 17.6229 21.7883 16.6266 21.1798L11.9999 18.3538L7.37329 21.1798C6.37697 21.7883 5.14158 20.8908 5.41246 19.7551L6.67038 14.4817L2.55303 10.9547C1.66639 10.1952 2.13826 8.74293 3.302 8.64964L8.70609 8.2164L10.7881 3.21068Z"
+                  fill="#F9CC00"
+                />
+              </svg>
+              <svg
+                width="12"
+                height="12"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M10.7881 3.21068C11.2364 2.13274 12.7635 2.13273 13.2118 3.21068L15.2938 8.2164L20.6979 8.64964C21.8616 8.74293 22.3335 10.1952 21.4469 10.9547L17.3295 14.4817L18.5874 19.7551C18.8583 20.8908 17.6229 21.7883 16.6266 21.1798L11.9999 18.3538L7.37329 21.1798C6.37697 21.7883 5.14158 20.8908 5.41246 19.7551L6.67038 14.4817L2.55303 10.9547C1.66639 10.1952 2.13826 8.74293 3.302 8.64964L8.70609 8.2164L10.7881 3.21068Z"
+                  fill="#F9CC00"
+                />
+              </svg>
+              <svg
+                width="12"
+                height="12"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M10.7881 3.21068C11.2364 2.13274 12.7635 2.13273 13.2118 3.21068L15.2938 8.2164L20.6979 8.64964C21.8616 8.74293 22.3335 10.1952 21.4469 10.9547L17.3295 14.4817L18.5874 19.7551C18.8583 20.8908 17.6229 21.7883 16.6266 21.1798L11.9999 18.3538L7.37329 21.1798C6.37697 21.7883 5.14158 20.8908 5.41246 19.7551L6.67038 14.4817L2.55303 10.9547C1.66639 10.1952 2.13826 8.74293 3.302 8.64964L8.70609 8.2164L10.7881 3.21068Z"
+                  fill="#F9CC00"
+                />
+              </svg>
+              <svg
+                width="12"
+                height="12"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M10.7881 3.21068C11.2364 2.13274 12.7635 2.13273 13.2118 3.21068L15.2938 8.2164L20.6979 8.64964C21.8616 8.74293 22.3335 10.1952 21.4469 10.9547L17.3295 14.4817L18.5874 19.7551C18.8583 20.8908 17.6229 21.7883 16.6266 21.1798L11.9999 18.3538L7.37329 21.1798C6.37697 21.7883 5.14158 20.8908 5.41246 19.7551L6.67038 14.4817L2.55303 10.9547C1.66639 10.1952 2.13826 8.74293 3.302 8.64964L8.70609 8.2164L10.7881 3.21068Z"
+                  fill="#F9CC00"
+                />
+              </svg>
+            </div>
+            <p class="text-[10px] font-light my-2">
+              “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit,
+              sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing
+              elit, sed do eiusmod”
+            </p>
+            <p class="text-[10px] font-semibold">John Dee 32, Bromo</p>
+          </div>
+        </div>
+        <div
+          class="card-2 flex flex-col sm:flex-row rounded-md w-[16em] sm:w-[25em] h-auto bg-[#F1F3FF] p-5"
+        >
+          <div class="flex justify-center self-center items-center">
+            <img
+              class="w-[4em] sm:w-[16em] justify-center"
+              src="orang2.png"
+              alt="org"
+            />
+          </div>
+          <div class="flex-col ml-0 sm:ml-8 my-2">
+            <div class="flex flex-row justify-center sm:justify-start my-2">
+              <svg
+                width="12"
+                height="12"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M10.7881 3.21068C11.2364 2.13274 12.7635 2.13273 13.2118 3.21068L15.2938 8.2164L20.6979 8.64964C21.8616 8.74293 22.3335 10.1952 21.4469 10.9547L17.3295 14.4817L18.5874 19.7551C18.8583 20.8908 17.6229 21.7883 16.6266 21.1798L11.9999 18.3538L7.37329 21.1798C6.37697 21.7883 5.14158 20.8908 5.41246 19.7551L6.67038 14.4817L2.55303 10.9547C1.66639 10.1952 2.13826 8.74293 3.302 8.64964L8.70609 8.2164L10.7881 3.21068Z"
+                  fill="#F9CC00"
+                />
+              </svg>
+              <svg
+                width="12"
+                height="12"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M10.7881 3.21068C11.2364 2.13274 12.7635 2.13273 13.2118 3.21068L15.2938 8.2164L20.6979 8.64964C21.8616 8.74293 22.3335 10.1952 21.4469 10.9547L17.3295 14.4817L18.5874 19.7551C18.8583 20.8908 17.6229 21.7883 16.6266 21.1798L11.9999 18.3538L7.37329 21.1798C6.37697 21.7883 5.14158 20.8908 5.41246 19.7551L6.67038 14.4817L2.55303 10.9547C1.66639 10.1952 2.13826 8.74293 3.302 8.64964L8.70609 8.2164L10.7881 3.21068Z"
+                  fill="#F9CC00"
+                />
+              </svg>
+              <svg
+                width="12"
+                height="12"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M10.7881 3.21068C11.2364 2.13274 12.7635 2.13273 13.2118 3.21068L15.2938 8.2164L20.6979 8.64964C21.8616 8.74293 22.3335 10.1952 21.4469 10.9547L17.3295 14.4817L18.5874 19.7551C18.8583 20.8908 17.6229 21.7883 16.6266 21.1798L11.9999 18.3538L7.37329 21.1798C6.37697 21.7883 5.14158 20.8908 5.41246 19.7551L6.67038 14.4817L2.55303 10.9547C1.66639 10.1952 2.13826 8.74293 3.302 8.64964L8.70609 8.2164L10.7881 3.21068Z"
+                  fill="#F9CC00"
+                />
+              </svg>
+              <svg
+                width="12"
+                height="12"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M10.7881 3.21068C11.2364 2.13274 12.7635 2.13273 13.2118 3.21068L15.2938 8.2164L20.6979 8.64964C21.8616 8.74293 22.3335 10.1952 21.4469 10.9547L17.3295 14.4817L18.5874 19.7551C18.8583 20.8908 17.6229 21.7883 16.6266 21.1798L11.9999 18.3538L7.37329 21.1798C6.37697 21.7883 5.14158 20.8908 5.41246 19.7551L6.67038 14.4817L2.55303 10.9547C1.66639 10.1952 2.13826 8.74293 3.302 8.64964L8.70609 8.2164L10.7881 3.21068Z"
+                  fill="#F9CC00"
+                />
+              </svg>
+              <svg
+                width="12"
+                height="12"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M10.7881 3.21068C11.2364 2.13274 12.7635 2.13273 13.2118 3.21068L15.2938 8.2164L20.6979 8.64964C21.8616 8.74293 22.3335 10.1952 21.4469 10.9547L17.3295 14.4817L18.5874 19.7551C18.8583 20.8908 17.6229 21.7883 16.6266 21.1798L11.9999 18.3538L7.37329 21.1798C6.37697 21.7883 5.14158 20.8908 5.41246 19.7551L6.67038 14.4817L2.55303 10.9547C1.66639 10.1952 2.13826 8.74293 3.302 8.64964L8.70609 8.2164L10.7881 3.21068Z"
+                  fill="#F9CC00"
+                />
+              </svg>
+            </div>
+            <p class="text-[10px] font-light my-2">
+              “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit,
+              sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing
+              elit, sed do eiusmod”
+            </p>
+            <p class="text-[10px] font-semibold">John Dee 32, Bromo</p>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-row justify-center pt-2 mx-3">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="0.5"
+          stroke="currentColor"
+          class="w-6 h-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="m11.25 9-3 3m0 0 3 3m-3-3h7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+          />
+        </svg>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="0.5"
+          stroke="currentColor"
+          class="w-6 h-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="m12.75 15 3-3m0 0-3-3m3 3h-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+          />
+        </svg>
+      </div>
+    </div>
+
+    <!-- box -->
+    <div
+      class="flex flex-col bg-white justify-center"
+      style="padding-bottom: 5em; align-items: center; align-content: center"
+    >
+      <div class="rectangle-2 flex flex-col justify-center items-center">
+        <h1 class="text-2xl text-white font-bold mb-8 text-center">
+          Sewa Mobil di (Lokasimu) Sekarang
+        </h1>
+        <p
+          class="text-white text-sm text-center mb-6"
+          style="max-width: 34.375em"
+        >
+          Selamat datang di Binar Car Rental. Kami menyediakan mobil kualitas
+          terbaik dengan harga terjangkau. Selalu siap melayani kebutuhanmu
+          untuk sewa mobil selama 24 jam.
+        </p>
+        <div
+          class="button-1 rounded-sm font-extrabold focus:outline-none text-[9px] text-white px-2 py-2 mb-3"
+          style="margin-top: 0.625em"
+        >
+          Mulai Sewa Mobil
+        </div>
+      </div>
+    </div>
+
+    <!--FAQ  -->
+    <div id="FAQ" class="flex flex-col sm:flex-row flex-wrap bg-white pb-8">
+      <div
+        class="flex flex-1 flex-col ml-0 sm:ml-12 md:ml-24 lg:ml-24 items-center sm:items-start"
+      >
+        <h1
+          class="text-xl"
+          style="font-weight: 900; margin-bottom: 1.25em; line-height: 150%"
+        >
+          Frequently Asked Question
+        </h1>
+        <p
+          class="text-center sm:text-start text-xs mb-[1em] mx-[2.5em] sm:mx-0"
+        >
+          Loem ipsum dolor sit amet, consectetur adipiscing elit
+        </p>
+      </div>
+      <div class="flex flex-1 justify-center sm:justify-normal mr-0 sm:mr-20">
+        <div class="hs-accordion-group">
+          <div
+            class="hs-accordion border border-[#d0d0d0]"
+            style="border-radius: 0.625em; margin-bottom: 1.25em"
+            id="hs-basic-heading-two"
+          >
+            <button
+              class="hs-accordion-toggle text-black px-6 py-3 inline-flex items-center gap-x-3 text-md w-full font-light text-start"
+              aria-controls="hs-basic-collapse-two"
+            >
+              <svg
+                class="hs-accordion-active:hidden hs-accordion-active:text-blue-600 hs-accordion-active:group-hover:text-blue-600 block size-4 text-gray-600 group-hover:text-gray-500 dark:text-gray-400"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M5 12h14" />
+                <path d="M12 5v14" />
+              </svg>
+              <svg
+                class="hs-accordion-active:block hs-accordion-active:text-blue-600 hs-accordion-active:group-hover:text-blue-600 hidden size-4 text-gray-600 group-hover:text-gray-500 dark:text-gray-400"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M5 12h14" />
+              </svg>
+              <p class="text-xs">Apa syarat yang dibutuhkan?</p>
+            </button>
+            <div
+              id="hs-basic-collapse-two"
+              class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300"
+              aria-labelledby="hs-basic-heading-two"
+            >
+              <div class="pb-4 px-6">
+                <p class="text-xs text-black" style="margin-top: 1.25em">
+                  It is hidden by default, until the collapse plugin adds the
+                  appropriate classes that we use to style each element.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="hs-accordion border border-[#d0d0d0]"
+            style="border-radius: 0.625em; margin-bottom: 1.25em"
+            id="hs-basic-heading-two"
+          >
+            <button
+              class="hs-accordion-toggle text-black px-6 py-3 inline-flex items-center gap-x-3 text-md w-full font-light text-start"
+              aria-controls="hs-basic-collapse-two"
+            >
+              <svg
+                class="hs-accordion-active:hidden hs-accordion-active:text-blue-600 hs-accordion-active:group-hover:text-blue-600 block size-4 text-gray-600 group-hover:text-gray-500 dark:text-gray-400"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M5 12h14" />
+                <path d="M12 5v14" />
+              </svg>
+              <svg
+                class="hs-accordion-active:block hs-accordion-active:text-blue-600 hs-accordion-active:group-hover:text-blue-600 hidden size-4 text-gray-600 group-hover:text-gray-500 dark:text-gray-400"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M5 12h14" />
+              </svg>
+              <p class="text-xs">Berapa hari minimal sewa mobil lepas kunci?</p>
+            </button>
+            <div
+              id="hs-basic-collapse-two"
+              class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300"
+              aria-labelledby="hs-basic-heading-two"
+            >
+              <div class="pb-4 px-6">
+                <p class="text-xs text-black" style="margin-top: 1.25em">
+                  It is hidden by default, until the collapse plugin adds the
+                  appropriate classes that we use to style each element.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="hs-accordion border border-[#d0d0d0]"
+            style="border-radius: 0.625em; margin-bottom: 1.25em"
+            id="hs-basic-heading-two"
+          >
+            <button
+              class="hs-accordion-toggle text-black px-6 py-3 inline-flex items-center gap-x-3 text-md w-full font-light text-start"
+              aria-controls="hs-basic-collapse-two"
+            >
+              <svg
+                class="hs-accordion-active:hidden hs-accordion-active:text-blue-600 hs-accordion-active:group-hover:text-blue-600 block size-4 text-gray-600 group-hover:text-gray-500 dark:text-gray-400"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M5 12h14" />
+                <path d="M12 5v14" />
+              </svg>
+              <svg
+                class="hs-accordion-active:block hs-accordion-active:text-blue-600 hs-accordion-active:group-hover:text-blue-600 hidden size-4 text-gray-600 group-hover:text-gray-500 dark:text-gray-400"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M5 12h14" />
+              </svg>
+              <p class="text-xs">
+                Berapa hari sebelumnya sabaiknya booking sewa mobil?
+              </p>
+            </button>
+            <div
+              id="hs-basic-collapse-two"
+              class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300"
+              aria-labelledby="hs-basic-heading-two"
+            >
+              <div class="pb-4 px-6">
+                <p class="text-xs text-black" style="margin-top: 1.25em">
+                  It is hidden by default, until the collapse plugin adds the
+                  appropriate classes that we use to style each element.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="hs-accordion border border-[#d0d0d0]"
+            style="border-radius: 0.625em; margin-bottom: 1.25em"
+            id="hs-basic-heading-two"
+          >
+            <button
+              class="hs-accordion-toggle text-black px-6 py-3 inline-flex items-center gap-x-3 text-md w-full font-light text-start"
+              aria-controls="hs-basic-collapse-two"
+            >
+              <svg
+                class="hs-accordion-active:hidden hs-accordion-active:text-blue-600 hs-accordion-active:group-hover:text-blue-600 block size-4 text-gray-600 group-hover:text-gray-500 dark:text-gray-400"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M5 12h14" />
+                <path d="M12 5v14" />
+              </svg>
+              <svg
+                class="hs-accordion-active:block hs-accordion-active:text-blue-600 hs-accordion-active:group-hover:text-blue-600 hidden size-4 text-gray-600 group-hover:text-gray-500 dark:text-gray-400"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M5 12h14" />
+              </svg>
+              <p class="text-xs">Apakah Ada biaya antar-jemput?</p>
+            </button>
+            <div
+              id="hs-basic-collapse-two"
+              class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300"
+              aria-labelledby="hs-basic-heading-two"
+            >
+              <div class="pb-4 px-6">
+                <p class="text-xs text-black" style="margin-top: 1.25em">
+                  It is hidden by default, until the collapse plugin adds the
+                  appropriate classes that we use to style each element.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="hs-accordion border border-[#d0d0d0]"
+            style="border-radius: 0.625em; margin-bottom: 1.25em"
+            id="hs-basic-heading-two"
+          >
+            <button
+              class="hs-accordion-toggle text-black font-light px-6 py-3 inline-flex items-center gap-x-3 text-md w-full text-start"
+              aria-controls="hs-basic-collapse-two"
+            >
+              <svg
+                class="hs-accordion-active:hidden hs-accordion-active:text-blue-600 hs-accordion-active:group-hover:text-blue-600 block size-4 text-gray-600 group-hover:text-gray-500 dark:text-gray-400"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M5 12h14" />
+                <path d="M12 5v14" />
+              </svg>
+              <svg
+                class="hs-accordion-active:block hs-accordion-active:text-blue-600 hs-accordion-active:group-hover:text-blue-600 hidden size-4 text-gray-600 group-hover:text-gray-500 dark:text-gray-400"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M5 12h14" />
+              </svg>
+              <p class="text-xs font-light">
+                Bagaimana jika terjadi kecelakaan?
+              </p>
+            </button>
+            <div
+              id="hs-basic-collapse-two"
+              class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300"
+              aria-labelledby="hs-basic-heading-two"
+            >
+              <div class="pb-4 px-6">
+                <p class="text-xs text-black" style="margin-top: 1.25em">
+                  It is hidden by default, until the collapse plugin adds the
+                  appropriate classes that we use to style each element.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <div class="flex flex-col sm:flex-row bg-white px-10 sm:px-24 py-10 gap-3">
+      <div class="flex flex-col w-[12em] gap-3 mr-0 sm:mr-4">
+        <p class="text-[10px]">
+          Jalan Suroyo No. 161 Mayangan Kota Probolonggo 672000
+        </p>
+        <p class="text-[10px]">binarcarrental@gmail.com</p>
+        <p class="text-[10px]">081-233-334-808</p>
+      </div>
+      <div class="flex flex-col w-[10em] gap-3 font-medium">
+        <p class="text-[10px]">Our services</p>
+        <p class="text-[10px]">Why Us</p>
+        <p class="text-[10px]">Testimonial</p>
+        <p class="text-[10px]">FAQ</p>
+      </div>
+      <div class="flex flex-col w-[12em] gap-3">
+        <p class="text-[10px]">Connect with us</p>
+        <img style="width: 140px" src="list item.png" alt="connect" />
+      </div>
+      <div class="flex flex-col w-[12em] gap-3">
+        <p class="text-[10px]">Copyright binar</p>
+        <div class="rectangle"></div>
+      </div>
+    </div>
+    <script src="./node_modules/preline/dist/preline.js"></script>
+  </body>
+</html>
